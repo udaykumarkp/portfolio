@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --font: 'montserrat', sans-serif;
+    --prime-font: 'work sans', sans-serif;
+    --bg: #1a1c20;
+    --main-color: #f9813a;
+    --main-font-color: #fdfbfd;
+    --sec-font-color: #fcf1f1b4;
+}
+
+body{
+    background: var(--bg);
+    font-family: var(--font);
+    color: var(--main-font-color);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*navbar */
+
+.nav {
+    width: 85%;
+    height: 70px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.checkbtn{
+    display: none;
+}
+
+.nav ol{
+    list-style: none;
+}
+
+.nav ol a{
+    text-decoration: none;
+    color: var(--sec-font-color);
+    margin: 0.3em;
+    padding: 0.5em 1.5em;
+    border-radius: 10px;
+
+}
+
+.nav ol a:hover{
+    transform: background .8s;
+    background: var(--main-color);
+}
+
+/*Main section*/
+
+.main{
+    width: 85%;
+    height: 650px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.main::before, .main::after{
+    content: '';
+    width: 80%;
+    height: 70%;
+    background: #151618;
+    position: absolute;
+    bottom: 0;
+    right: -10%;
+    z-index: -10;
+}
+
+.main::after{
+    background: #15161885;
+    height: 60%;
+    top: 20px;
+    left: -40px;
+    border-top: 1px solid #f9803a;
+    border-right: 1px solid #4985c9;
+    z-index: -11;
+}
+
+.box h1{
+    font-size: 4.5em;
+    margin-bottom: 0.2em;
+}
+
+.box p{
+    font-size: 1.2em;
+    color: var(--sec-font-color);
+    margin-bottom: 1.2em;
+}
+
+.box .btn{
+    font-size: 1.2em;
+    background: none;
+    color: var(--sec-font-color);
+    border: none;
+    cursor: pointer;
+    border: 1px solid var(--main-color);
+    width: 7em;
+    height: 2.2em;
+    transition: all .4s;
+}
+
+.box .btn:hover{
+    background: var(--main-color);
+}
+
+.main img {
+    width: 35em;
+    position: absolute;
+    right: 60px;
+    z-index: -1;
+}
+/* about */
+
+.about{
+    width: 100%;
+    padding: 8em 0;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: start;
+}
+
+.about .box_wrap{
+    margin: 2em 0;
+}
+
+.about .box_wrap .heading{
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    position: relative;
+}
+
+.about .box_wrap .heading::before{
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    width: 80px;
+    height: 8px;
+    background: var(--main-color);
+    z-index: -1;
+}
+
+.about .box_wrap .text{
+    color: var(--sec-font-color);
+}
+
+.about .box_wrap{
+    width: 35%;
+}
+
+.skills_box i{
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    color: var(--sec-font-color);
+}
+
+/* education */
+
+.education {
+    width: 100%;
+    background: #151618;
+    padding: 5em 0;
+    justify-content: center;
+}
+
+.education .left_box{
+    width: 20%;
+}
+
+.education .left_box .container {
+    margin: 2em 0;
+}
+
+.education .heading{
+    font-size: 3em;
+}
+
+.education :is(h3, small ,p){
+    margin: 0.5em 0;
+}
+
+.left_box .container{
+    position: relative;
+}
+
+.left_box .container::before{
+    content: '';
+    position: absolute;
+    width:8px;
+    height: 100%;
+    background: var(--main-color);
+    left: -20px;
+}
+
+.education :is(small p){
+    color: var(--sec-font-color);
+}
+
+.education .right_box{
+    width: 40%;
+}
+
+.education .right_box img{
+    width: 100%;
+}
+
+/*Contact*/
+
+.contact {
+    width: 100%;
+    padding: 5em 0;
+    flex-direction: column;
+}
+
+.contact h3 {
+    font-size: 3em;
+}
+
+.contact form{
+    flex-direction: column;
+    min-width: 30%;
+}
+
+.contact form :is(input,textarea,button){
+    margin: 0.8em;
+    width: 100%;
+    height: 45px;
+    border: none;
+    background: #1516186e;
+    color: white;
+    border-radius: border-box;
+    padding: 0.2em 1em;
+}
+
+.contact form textarea{
+    resize: none;
+    height: 80px;
+}
+
+.contact form button{
+    background: var(--main-color);
+    cursor: pointer;
+    height: 40px;
+    font-size: 1em;
+}
+
+/* Experience */
+.Experience{
+    width: 100%;
+    padding: 5em 0;
+    flex-direction: column;
+    background: #2b2d334f;
+}
+
+.Experience h3  {
+    font-size: 3em;
+}
+
+.Experience ul {
+    list-style: none;
+}
+
+.Experience ul li {
+    margin: 3em 0;
+    font-size: 1.5em;
+    position: relative;
+    padding: 0.5em 1em;
+}
+
+.Experience ul li::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 60px;
+    background: var(--main-color);
+    top: 0;
+    left: -20px;
+}
+
+
